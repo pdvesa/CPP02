@@ -31,7 +31,7 @@ fixedPoint& fixedPoint::operator=(const fixedPoint &src) {
 
 int fixedPoint::getRawBits(void) const {
     std::cout << "getRawBits member function called" << std::endl;
-    return(_fixedPoint);
+    return (_fixedPoint);
 }
 
 void fixedPoint::setRawBits(int const raw) {
@@ -39,13 +39,11 @@ void fixedPoint::setRawBits(int const raw) {
     _fixedPoint = raw;
 }
 
-int fixedPoint::toInt() const
-{
+int fixedPoint::toInt() const {
 	return (_fixedPoint >> _scale);
 }
 
-float fixedPoint::toFloat() const
-{
+float fixedPoint::toFloat() const {
 	return ((float)_fixedPoint / (float)(1 << _scale));
 }
 
